@@ -44,3 +44,40 @@ CREATE TABLE Ubicaciones_casa (
 
     );
 GO
+
+-- Tabla automatizaciones
+CREATE TABLE Automatizaciones (
+    id_automatizacion INT IDENTITY(1,1) PRIMARY KEY,
+    id_ubicacion_casa INT,
+    descripcion_automatizacion VARCHAR(120),
+    regla_automatizacion VARCHAR(50),
+    condicion_automatizacion VARCHAR(50),
+    accion VARCHAR(50),
+    estado BIT DEFAULT 1,
+    nombre_automatizacion VARCHAR(50),
+    FOREIGN KEY (id_ubicacion_casa) REFERENCES Ubicaciones_casa(id_ubicacion_casa )
+    );
+GO
+
+-- Tabla dispositivos
+CREATE TABLE Dispositivos(
+    id_dispositivo INT IDENTITY(1,1) PRIMARY KEY,
+    id_ubicacion_casa INT,
+    nombre_dispositivo VARCHAR(50),
+    estado BIT,
+    descripcion VARCHAR(100),
+    tipo_dispositivo VARCHAR(50),
+    fecha_creacion DATETIME,
+    FOREIGN KEY (id_ubicacion_casa) REFERENCES Ubicaciones_casa(id_ubicacion_casa)
+    );
+GO
+
+-- Tabla automatizaciones_dispositivos
+CREATE TABLE Automatizaciones_dispositivos(
+    id_automatizacion INT,
+    id_dispositivo INT,
+    PRIMARY KEY (id_automatizacion, id_dispositivo),
+    FOREIGN KEY (id_automatizacion) REFERENCES Automatizaciones(id_automatizacion),
+    FOREIGN KEY (id_dispositivo) REFERENCES Dispositivos(id_dispositivo)
+    );
+GO
