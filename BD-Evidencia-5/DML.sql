@@ -38,6 +38,8 @@ VALUES
 ('Calle El Salvador','290','Palermo','Buenos Aires','Argentina', '3256');
 GO
 
+SELECT * FROM Domicilios
+
 -- ---- Tabla Usuarios ----
 INSERT INTO Usuarios (email, apellido, nombre, contrasena, telefono, rol, fecha_nacimiento)
 VALUES
@@ -72,3 +74,5 @@ VALUES
 ('daniel.moreno@email.com','Moreno','Daniel','pass119','9999999999','Usuario','1995-10-05'),
 ('soledad.alvarez@email.com','Alvarez','Soledad','pass120','1010101010','Usuario','1993-06-11');
 GO
+
+SELECT * FROM Usuarios
