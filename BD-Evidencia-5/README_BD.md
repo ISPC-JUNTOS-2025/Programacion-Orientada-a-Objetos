@@ -19,7 +19,7 @@ Para ejecutar los scripts de forma online (sin instalar nada), recomendamos usar
 
 ---
 
-## ▶️ Pasos para ejecutar los scripts
+## Pasos para ejecutar los scripts
 
 1. Acceder a [OneCompiler - SQL Server](https://onecompiler.com/sqlserver).
 2. En la ventana de edición:
