@@ -25,3 +25,22 @@ CREATE TABLE Domicilios (
 	codigo_postal VARCHAR(20)
 );
 GO
+
+-- Tabla Usuarios_Domicilios
+CREATE TABLE Usuarios_Domicilios (
+    id_domicilio INT,
+    email_usuario VARCHAR(100),
+    FOREIGN KEY (id_domicilio) REFERENCES Domicilios(id_domicilio) ON DELETE CASCADE,
+    FOREIGN KEY (email_usuario) REFERENCES Usuarios(email) ON DELETE CASCADE
+);
+GO
+
+-- Tabla ubicaciones_casa
+CREATE TABLE Ubicaciones_casa (
+    id_ubicacion_casa INT IDENTITY(1,1) PRIMARY KEY,
+    id_domicilio INT NOT NULL,
+    nombre_ubicacion VARCHAR(50),
+    FOREIGN KEY (id_domicilio) REFERENCES Domicilios(id_domicilio)
+
+    );
+GO
