@@ -76,3 +76,76 @@ VALUES
 GO
 
 SELECT * FROM Usuarios
+
+-- ---- Tabla Usuarios_Domicilios ----
+INSERT INTO Usuarios_Domicilios (id_domicilio, email_usuario)
+VALUES
+(1,'juan.perez@email.com'),
+(2,'maria.gomez@email.com'),
+(3,'carlos.rodriguez@email.com'),
+(4,'laura.martinez@email.com'),
+(5,'andres.lopez@email.com'),
+(6,'sofia.ramirez@email.com'),
+(7,'diego.torres@email.com'),
+(8,'valentina.sanchez@email.com'),
+(9,'martin.morales@email.com'),
+(10,'carolina.garcia@email.com'),
+(11,'nicolas.rojas@email.com'),
+(12,'ana.flores@email.com'),
+(13,'fernando.mena@email.com'),
+(14,'julieta.vega@email.com'),
+(15,'pablo.ramos@email.com'),
+(16,'isabella.toro@email.com'),
+(17,'lucas.ortiz@email.com'),
+(18,'sofia.castillo@email.com'),
+(19,'martin.castro@email.com'),
+(20,'carla.molina@email.com'),
+(21,'gonzalo.mendez@email.com'),
+(22,'paula.diaz@email.com'),
+(23,'jorge.fuentes@email.com'),
+(24,'marta.caballero@email.com'),
+(25,'roberto.martin@email.com'),
+(26,'andrea.vargas@email.com'),
+(27,'federico.soto@email.com'),
+(28,'camila.rios@email.com'),
+(29,'daniel.moreno@email.com'),
+(30,'soledad.alvarez@email.com');
+GO
+SELECT * FROM Usuarios_Domicilios
+
+-- ---- Tabla Ubicaciones_casa ----
+INSERT INTO Ubicaciones_casa (id_domicilio, nombre_ubicacion)
+VALUES
+(1,'Living'),
+(1,'Cocina'),
+(2,'Dormitorio'),
+(2,'Baño'),
+(3,'Garage'),
+(3,'Living'),
+(4,'Cocina'),
+(4,'Dormitorio'),
+(5,'Baño'),
+(5,'Living'),
+(6,'Cocina'),
+(6,'Dormitorio'),
+(7,'Baño'),
+(7,'Living'),
+(8,'Cocina'),
+(8,'Dormitorio'),
+(9,'Baño'),
+(9,'Living'),
+(10,'Cocina'),
+(10,'Dormitorio'),
+(11,'Living'),
+(12,'Cocina'),
+(13,'Dormitorio'),
+(14,'Baño'),
+(15,'Living'),
+(16,'Cocina'),
+(17,'Dormitorio'),
+(18,'Baño'),
+(19,'Living'),
+(20,'Cocina');
+GO
+
+SELECT * FROM Ubicaciones_casa
