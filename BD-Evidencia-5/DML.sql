@@ -149,3 +149,114 @@ VALUES
 GO
 
 SELECT * FROM Ubicaciones_casa
+
+-- ---- Tabla Dispositivos ----
+INSERT INTO Dispositivos (id_ubicacion_casa, nombre_dispositivo, estado, descripcion, tipo_dispositivo, fecha_creacion)
+VALUES
+(1,'Luz Living',1,'Luz principal del living','Luz',GETDATE()),
+(2,'Sensor Cocina',0,'Sensor de movimiento en cocina','Sensor',GETDATE()),
+(3,'Cámara Garage',1,'Cámara de seguridad','Cámara',GETDATE()),
+(4,'Termostato Dormitorio',1,'Control de temperatura','Termostato',GETDATE()),
+(5,'Ventilador Baño',0,'Ventilador automático','Ventilador',GETDATE()),
+(6,'Luz Cocina',1,'Luz cocina principal','Luz',GETDATE()),
+(7,'Sensor Dormitorio',0,'Sensor de presencia','Sensor',GETDATE()),
+(8,'Cámara Dormitorio',1,'Cámara seguridad','Cámara',GETDATE()),
+(9,'Termostato Baño',1,'Control temperatura baño','Termostato',GETDATE()),
+(10,'Ventilador Living',0,'Ventilador living','Ventilador',GETDATE()),
+(11,'Luz Garage',1,'Luz exterior garage','Luz',GETDATE()),
+(12,'Sensor Cocina 2',0,'Sensor adicional cocina','Sensor',GETDATE()),
+(13,'Cámara Dormitorio 2',1,'Cámara dormitorio 2','Cámara',GETDATE()),
+(14,'Termostato Dormitorio 2',1,'Control de temperatura dormitorio 2','Termostato',GETDATE()),
+(15,'Ventilador Baño 2',0,'Ventilador baño 2','Ventilador',GETDATE()),
+(16,'Luz Dormitorio',1,'Luz principal dormitorio','Luz',GETDATE()),
+(17,'Sensor Living',0,'Sensor de presencia living','Sensor',GETDATE()),
+(18,'Cámara Cocina',1,'Cámara cocina','Cámara',GETDATE()),
+(19,'Termostato Living',1,'Control temperatura living','Termostato',GETDATE()),
+(20,'Ventilador Dormitorio',0,'Ventilador dormitorio','Ventilador',GETDATE()),
+(21,'Luz Baño',1,'Luz baño','Luz',GETDATE()),
+(22,'Sensor Garage',0,'Sensor de garage','Sensor',GETDATE()),
+(23,'Cámara Cocina 2',1,'Cámara cocina 2','Cámara',GETDATE()),
+(24,'Termostato Garage',1,'Control temperatura garage','Termostato',GETDATE()),
+(25,'Ventilador Dormitorio 2',0,'Ventilador dormitorio 2','Ventilador',GETDATE()),
+(26,'Luz Dormitorio 2',1,'Luz dormitorio 2','Luz',GETDATE()),
+(27,'Sensor Baño',0,'Sensor de baño','Sensor',GETDATE()),
+(28,'Cámara Living',1,'Cámara living','Cámara',GETDATE()),
+(29,'Termostato Cocina',1,'Control temperatura cocina','Termostato',GETDATE()),
+(30,'Ventilador Living 2',0,'Ventilador living 2','Ventilador',GETDATE());
+GO
+
+SELECT * FROM Dispositivos
+
+-- ---- Tabla Automatizaciones ----
+INSERT INTO Automatizaciones (id_ubicacion_casa, descripcion_automatizacion, regla_automatizacion, condicion_automatizacion, accion, nombre_automatizacion)
+VALUES
+(1,'Encender luces al anochecer','Tiempo','19:00','Encender Luz','Luces Living'),
+(2,'Apagar luces si no hay movimiento','Sensor','No movimiento','Apagar Luz','Cocina Off'),
+(3,'Activar alarma al abrir puerta','Sensor','Puerta abierta','Activar Alarma','Alarma Garage'),
+(4,'Encender calefacción','Tiempo','06:00','Encender Calefacción','Calefacción Dormitorio'),
+(5,'Apagar ventilador automáticamente','Tiempo','22:00','Apagar Ventilador','Ventilador Baño'),
+(6,'Encender luces automáticamente','Tiempo','19:30','Encender Luz','Luces Cocina'),
+(7,'Apagar luces si no hay movimiento','Sensor','No movimiento','Apagar Luz','Dormitorio Off'),
+(8,'Activar alarma al abrir ventana','Sensor','Ventana abierta','Activar Alarma','Alarma Dormitorio'),
+(9,'Encender calefacción','Tiempo','07:00','Encender Calefacción','Calefacción Baño'),
+(10,'Apagar ventilador automáticamente','Tiempo','23:00','Apagar Ventilador','Ventilador Living'),
+(11,'Encender luces externas','Tiempo','20:00','Encender Luz','Garage Luz'),
+(12,'Sensor adicional cocina','Sensor','No movimiento','Alerta','Alerta Cocina'),
+(13,'Cámara vigilancia dormitorio','Sensor','Movimiento detectado','Activar Alarma','Cámara Dormitorio 2'),
+(14,'Termostato control dormitorio 2','Tiempo','06:30','Encender Calefacción','Termostato Dormitorio 2'),
+(15,'Ventilador baño 2','Tiempo','22:00','Apagar Ventilador','Ventilador Baño 2'),
+(16,'Encender luz dormitorio','Tiempo','18:30','Encender Luz','Luz Dormitorio'),
+(17,'Sensor living','Sensor','No movimiento','Apagar Luz','Sensor Living Off'),
+(18,'Cámara cocina','Sensor','Movimiento detectado','Activar Alarma','Cámara Cocina'),
+(19,'Control temperatura living','Tiempo','07:00','Encender Calefacción','Termostato Living'),
+(20,'Ventilador dormitorio','Tiempo','22:30','Apagar Ventilador','Ventilador Dormitorio'),
+(21,'Encender luz baño','Tiempo','19:00','Encender Luz','Luz Baño'),
+(22,'Sensor garage','Sensor','No movimiento','Alerta','Sensor Garage'),
+(23,'Cámara cocina 2','Sensor','Movimiento detectado','Activar Alarma','Cámara Cocina 2'),
+(24,'Control temperatura garage','Tiempo','06:00','Encender Calefacción','Termostato Garage'),
+(25,'Ventilador dormitorio 2','Tiempo','23:00','Apagar Ventilador','Ventilador Dormitorio 2'),
+(26,'Encender luz dormitorio 2','Tiempo','18:45','Encender Luz','Luz Dormitorio 2'),
+(27,'Sensor baño','Sensor','No movimiento','Apagar Luz','Sensor Baño Off'),
+(28,'Cámara living','Sensor','Movimiento detectado','Activar Alarma','Cámara Living'),
+(29,'Control temperatura cocina','Tiempo','07:15','Encender Calefacción','Termostato Cocina'),
+(30,'Ventilador living 2','Tiempo','23:15','Apagar Ventilador','Ventilador Living 2');
+GO
+
+SELECT * FROM Automatizaciones
+
+-- ---- Tabla Automatizaciones_dispositivos ----
+INSERT INTO Automatizaciones_dispositivos (id_automatizacion, id_dispositivo)
+VALUES
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5),
+(6,6),
+(7,7),
+(8,8),
+(9,9),
+(10,10),
+(11,11),
+(12,12),
+(13,13),
+(14,14),
+(15,15),
+(16,16),
+(17,17),
+(18,18),
+(19,19),
+(20,20),
+(21,21),
+(22,22),
+(23,23),
+(24,24),
+(25,25),
+(26,26),
+(27,27),
+(28,28),
+(29,29),
+(30,30);
+GO
+
+SELECT * FROM Automatizaciones_dispositivos
